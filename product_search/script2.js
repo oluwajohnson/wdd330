@@ -10,6 +10,11 @@ loadCategories();
 loadAllProducts();
 
 
+let masterProducts = []; // Always holds the full set
+let currentProducts = []; // Used for filtering only
+
+
+
 // LOAD CATEGORIES
 async function loadCategories() {
   const res = await fetch(`${API_URL}/categories`);
@@ -89,12 +94,41 @@ searchInput.addEventListener("input", () => {
 async function loadProductDetail(id) {
   const res = await fetch(`${API_URL}/${id}`);
   const product = await res.json();
-  displaySingleProduct(product);
+  // displaySingleProduct(product);
 }
 
 
 // DISPLAY PRODUCTS
-function displayProducts(products) {
+// function displayProducts(products) {
+//   productList.innerHTML = "";
+
+//   if (!products || products.length === 0) {
+//     productList.innerHTML = "<p>No products found.</p>";
+//     return;
+//   }
+
+//   products.forEach(product => {
+//     const card = document.createElement("div");
+//     card.className = "product-card";
+
+//     card.innerHTML = `
+//       <img src="${product.image}" alt="${product.title}">
+//       <h3>${product.title}</h3>
+//       <p>$${product.price}</p>
+//       <button>Add to Cart</button>
+//     `;
+
+//     productList.appendChild(card);
+//   });
+// }
+
+function displayProducts(products, updateMaster = true) {
+  if (updateMaster) {
+    masterProducts = [...products]; // Save full list
+  }
+
+  currentProducts = [...products]; // Working copy
+
   productList.innerHTML = "";
 
   if (!products || products.length === 0) {
@@ -116,3 +150,37 @@ function displayProducts(products) {
     productList.appendChild(card);
   });
 }
+
+
+
+// PRICE FILTER USING SLIDER
+const priceSlider = document.getElementById("priceSlider");
+const sliderValue = document.getElementById("sliderValue");
+
+priceSlider.addEventListener("input", () => {
+  sliderValue.textContent = "$" + priceSlider.value;
+  filterByPrice();
+});
+
+
+// PRICE FILTER USING INPUT BOXES
+document.getElementById("applyPriceFilter").addEventListener("click", () => {
+  filterByPrice();
+});
+
+
+function filterByPrice() {
+  let min = document.getElementById("minPrice").value;
+  let max = document.getElementById("maxPrice").value;
+
+  if (!max) max = priceSlider.value;
+  if (!min) min = 0;
+
+  const filtered = masterProducts.filter(p =>
+    p.price >= parseFloat(min) && p.price <= parseFloat(max)
+  );
+
+  displayProducts(filtered, false); // Don't overwrite master list
+}
+
+

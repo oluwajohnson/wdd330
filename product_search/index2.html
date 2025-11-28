@@ -23,6 +23,29 @@
     <div id="categoryList" class="category-list"></div>
   </section>
 
+
+<!-- Price Filter -->
+<section class="price-filter">
+  <h3>Filter by Price</h3>
+
+  <!-- Option A: Slider -->
+  <label>Max Price: <span id="sliderValue">$2000</span></label>
+  <input type="range" id="priceSlider" min="0" max="2000" step="10" value="2000">
+
+  <br><br>
+
+  <!-- Option B: Manual Input -->
+  <div class="manual-price-inputs">
+    <input type="number" id="minPrice" placeholder="Min price" min="0">
+    <input type="number" id="maxPrice" placeholder="Max price" min="0">
+    <button id="applyPriceFilter">Apply Filter</button>
+  </div>
+</section>
+
+
+
+
+
   <!-- Products -->
   <main>
     <h2>Products</h2>
