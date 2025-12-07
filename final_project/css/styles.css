@@ -66,7 +66,25 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--off);color
 
 .detail{background:white;padding:18px;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,0.08)}
 
+
+/* footer */
 .site-footer{padding:12px;text-align:center;color:#555;font-size:13px;margin-top:24px}
+/* .site-footer{background:var(--primary);color:white;padding:.75rem;margin-top:1.5rem;text-align:center} */
+
+.socials img {
+  width: 24px;
+  height: 24px;
+  margin: 0 5px;
+}
+.socials  {
+  display: flex;
+ padding: 1rem;
+   justify-content: center;
+}
+
+
+
+
 
 /* responsive */
 @media (max-width:900px){

@@ -28,7 +28,7 @@ async function runSearch(){
     }
     items.forEach(it => grid.appendChild(createCard(it)));
   }catch(e){
-    grid.innerHTML = '<p>Error searching items.</p>';
+    grid.innerHTML = `<p>Error loading category items. ${e}</p>`;
   }
 }
 

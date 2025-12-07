@@ -52,7 +52,7 @@ async function loadFeatured(){
     }
     items.forEach(it => grid.appendChild(createCard(it)));
   }catch(e){
-    grid.innerHTML = '<p>Error loading items.</p>';
+    grid.innerHTML = `<p>Error loading items. ${e}</p>`;
   }
 }
 
