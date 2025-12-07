@@ -1,6 +1,6 @@
 // CONFIG
 const API_BASE = "https://api.spoonacular.com/recipes/complexSearch";
-const API_KEY = "YOUR_SPOONACULAR_KEY"; // <-- replace this
+const API_KEY = "47ea24bd4bb64c9788f42f9be7b7cdee"; // <-- replace this
 
 // DOM ELEMENTS
 const searchForm = document.getElementById("searchForm");

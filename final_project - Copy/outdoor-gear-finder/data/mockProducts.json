@@ -1,0 +1,39 @@
+{
+  "products": [
+    {
+      "id": "t1",
+      "title": "TrailLite 2-Person Tent",
+      "price": "129.99",
+      "image": "images/tent1.jpg",
+      "description": "Lightweight 2-person tent, waterproof and easy setup."
+    },
+    {
+      "id": "t2",
+      "title": "Summit 4-Person Tent",
+      "price": "229.00",
+      "image": "images/tent2.jpg",
+      "description": "Spacious 4-person tent for family camping."
+    },
+    {
+      "id": "b1",
+      "title": "RidgePack 40L",
+      "price": "89.50",
+      "image": "images/backpack1.jpg",
+      "description": "Versatile 40L backpack with padded straps."
+    },
+    {
+      "id": "s1",
+      "title": "ComfySleep 0\u00b0C Sleeping Bag",
+      "price": "69.00",
+      "image": "images/sleep1.jpg",
+      "description": "Warm sleeping bag rated to 0\u00b0C."
+    },
+    {
+      "id": "h1",
+      "title": "HammockLite",
+      "price": "39.90",
+      "image": "images/hammock1.jpg",
+      "description": "Compact hammock with carry pouch."
+    }
+  ]
+}
