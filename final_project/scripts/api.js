@@ -65,7 +65,7 @@
 
 
 
-// js/api.js
+// script/api.js
 (function(){
   const API_BASE = "https://api.spoonacular.com";
   const API_KEY = "47ea24bd4bb64c9788f42f9be7b7cdee"; // replace if needed
@@ -119,6 +119,12 @@
       raw: it
     };
   }
+
+
+
+
+
+
 
   // expose globally
   window.API = {

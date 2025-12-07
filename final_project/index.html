@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Outdoor Gear Finder</title>
   <link rel="stylesheet" href="css/styles.css">
+
 </head>
 <body>
-  <header class="site-header">
+  <!-- <header class="site-header">
     <div class="brand">
       <div class="logo">⛺</div>
       <h1>Outdoor Gear Finder</h1>
@@ -17,7 +18,25 @@
       <input id="searchInput" placeholder="Search gear e.g. tent, backpack..." aria-label="Search gear">
       <button id="searchBtn" type="submit">Search</button>
     </form>
-  </header>
+  </header> -->
+  <header class="site-header">
+  <div class="brand">
+    <div class="logo">⛺</div>
+    <h1>Outdoor Gear Finder</h1>
+  </div>
+
+  <nav class="top-menu">
+    <a href="index.html" class="active">Home</a>
+    <a href="categories.html?cat=camp&title=All Categories">Categories</a>
+    <a href="favourites.html">Favourites ⭐</a>
+  </nav>
+
+  <form id="searchForm" class="search-form">
+    <input id="searchInput" placeholder="Search gear e.g. tent..." aria-label="Search gear">
+    <button id="searchBtn" type="submit">Search</button>
+  </form>
+</header>
+
 
   <main id="app" class="container">
     <section id="categories" class="categories">

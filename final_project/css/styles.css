@@ -6,6 +6,26 @@
   --card-radius:10px;
 }
 
+
+.top-menu {
+  display: flex;
+  gap: 14px;
+}
+.top-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 15px;
+  background: rgba(255,255,255,0.12);
+}
+.top-menu a:hover,
+.top-menu a.active {
+  background: rgba(0,0,0,0.25);
+}
+
+
+
 *{box-sizing:border-box}
 body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--off);color:var(--char)}
 .container{max-width:1100px;margin:18px auto;padding:0 12px}
@@ -30,6 +50,19 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--off);color
 .card img{width:100%;height:160px;object-fit:cover;border-radius:8px}
 .card .title{font-weight:600}
 .card .price{font-weight:700;color:var(--forest)}
+.card .remove-fav {
+  background: #c62828;
+  color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  margin-top: 6px;
+  cursor: pointer;
+}
+.card .remove-fav:hover {
+  background: #b71c1c;
+}
+
 
 .detail{background:white;padding:18px;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,0.08)}
 
@@ -43,4 +76,33 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--off);color
 @media (max-width:560px){
   .grid{grid-template-columns:1fr}
   .search-form input{width:120px}
+}
+/* Mobile Menu & Layout */
+@media (max-width: 600px) {
+  .site-header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .top-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .categories {
+    justify-content: center;
+  }
+
+  .grid {
+    grid-template-columns: 1fr; /* one column for small screens */
+  }
+
+  .search-form {
+    flex-direction: column;
+    width: 100%;
+  }
+  .search-form input {
+    width: 100%;
+  }
 }
