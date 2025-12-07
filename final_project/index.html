@@ -12,52 +12,31 @@
       <div class="logo">⛺</div>
       <h1>Outdoor Gear Finder</h1>
     </div>
-    <form id="searchForm" class="search-form" onsubmit="return false;">
+
+    <form id="searchForm" class="search-form">
       <input id="searchInput" placeholder="Search gear e.g. tent, backpack..." aria-label="Search gear">
-      <button id="searchBtn" type="button">Search</button>
+      <button id="searchBtn" type="submit">Search</button>
     </form>
-    <nav class="nav">
-      <button class="nav-toggle" id="favoritesToggle">Favorites ⭐</button>
-    </nav>
   </header>
 
-  <main id="app">
+  <main id="app" class="container">
     <section id="categories" class="categories">
-      <!-- Category cards inserted by JS -->
+      <!-- category buttons populated by js/index.js -->
     </section>
 
-    <section id="results" class="results hide">
+    <section id="featured" class="results">
       <div class="results-header">
-        <h2 id="resultsTitle">Results</h2>
-        <div class="controls">
-          <label>Sort:
-            <select id="sortSelect">
-              <option value="default">Default</option>
-              <option value="price-asc">Price: Low → High</option>
-              <option value="price-desc">Price: High → Low</option>
-            </select>
-          </label>
-        </div>
+        <h2>Featured Items</h2>
       </div>
       <div id="productsGrid" class="grid"></div>
     </section>
-
-    <section id="detail" class="detail hide">
-      <!-- Product detail view -->
-    </section>
-
-    <aside id="favoritesPanel" class="panel hide">
-      <h3>Favorites</h3>
-      <div id="favoritesList"></div>
-    </aside>
-
-    <div id="toast" class="toast hide"></div>
   </main>
 
   <footer class="site-footer">
-    <!-- <small>Built for school — uses external API (configure API_BASE & API_KEY in scripts/api.js)</small> -->
+    <small>School project — Outdoor Gear Finder</small>
   </footer>
 
-  <script type="module" src="scripts/main.js"></script>
+  <script src="scripts/api.js"></script>
+  <script src="scripts/index.js"></script>
 </body>
 </html>
